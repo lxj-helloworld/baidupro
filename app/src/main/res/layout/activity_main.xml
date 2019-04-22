@@ -19,7 +19,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/locationinfo_TV"/>
 
-
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,5 +26,12 @@
         android:onClick="openMap"
         android:text="打开地图"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:id="@+id/open_map_mark_btn"
+        android:onClick="openDragMap"
+        android:text="打开地图(标注拖拽)"/>
 
 </LinearLayout>

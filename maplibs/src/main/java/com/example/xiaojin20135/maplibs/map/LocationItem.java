@@ -1,5 +1,7 @@
 package com.example.xiaojin20135.maplibs.map;
 
+import com.baidu.location.BDLocation;
+
 import java.io.Serializable;
 
 /**
@@ -8,8 +10,8 @@ import java.io.Serializable;
  */
 
 public class LocationItem implements Serializable {
-    private String longitude = ""; //纬度信息
-    private String latitude = ""; //经度信息
+    private double longitude; //纬度信息
+    private double latitude; //经度信息
     private String addr = "";    //获取详细地址信息
     private String country = "";    //获取国家
     private String province = "";    //获取省份
@@ -21,19 +23,37 @@ public class LocationItem implements Serializable {
     private float radius;//定位精度
     private int errorCode;//定位错误返回码
 
-    public String getLongitude () {
+    public LocationItem(){
+
+    }
+    public LocationItem(BDLocation bdLocation){
+        this.latitude = bdLocation.getLatitude ();
+        this.longitude = bdLocation.getLongitude ();
+        this.addr = bdLocation.getAddrStr ();//获取详细地址信息
+        this.country = bdLocation.getCountry ();//获取国家
+        this.province = bdLocation.getProvince ();//获取省份
+        this.city = bdLocation.getCity ();//获取城市
+        this.district = bdLocation.getDistrict ();//获取区县
+        this.street = bdLocation.getStreet ();//获取街道信息
+        this.locationDescribe = bdLocation.getLocationDescribe ();//位置描述信息
+        this.coorType = bdLocation.getCoorType ();//坐标类型
+        this.radius = bdLocation.getRadius ();//定位精度
+        this.errorCode = bdLocation.getLocType ();//定位错误返回码
+    }
+
+    public Double getLongitude () {
         return longitude;
     }
 
-    public void setLongitude (String longitude) {
+    public void setLongitude (Double longitude) {
         this.longitude = longitude;
     }
 
-    public String getLatitude () {
+    public Double getLatitude () {
         return latitude;
     }
 
-    public void setLatitude (String latitude) {
+    public void setLatitude (Double latitude) {
         this.latitude = latitude;
     }
 

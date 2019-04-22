@@ -1,14 +1,13 @@
 package com.example.xiaojin20135.baidupro;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import com.example.xiaojin20135.maplibs.map.LocationActivity;
-import com.example.xiaojin20135.maplibs.map.LocationInMapActivity;
 import com.example.xiaojin20135.maplibs.map.LocationItem;
+import com.example.xiaojin20135.maplibs.map.activity.ShowMapActivity;
 
 public class MainActivity extends LocationActivity {
     private TextView locationinfo_TV;
@@ -35,7 +34,12 @@ public class MainActivity extends LocationActivity {
     }
 
     public void openMap(View view) {
-        Intent intent = new Intent(this,LocationInMapActivity.class);
+        Intent intent = new Intent(this,MyShowMapActivity.class);
+        startActivity(intent);
+    }
+
+    public void openDragMap(View view) {
+        Intent intent = new Intent(this,MyShowMapMArkActivity.class);
         startActivity(intent);
     }
 }

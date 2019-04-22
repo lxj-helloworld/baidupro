@@ -27,6 +27,7 @@ import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
 import com.example.xiaojin20135.maplibs.R;
+import com.example.xiaojin20135.maplibs.map.util.MapUtil;
 
 
 import java.io.Serializable;
@@ -285,8 +286,8 @@ public class LocationInMapActivity extends AppCompatActivity {
                     latitude = marker.getPosition().latitude+"";
                     longitude = marker.getPosition().longitude+"";
                     locationItem = new LocationItem();
-                    locationItem.setLatitude(marker.getPosition().latitude+"");
-                    locationItem.setLongitude(marker.getPosition().longitude+"");
+//                    locationItem.setLatitude(marker.getPosition().latitude+"");
+//                    locationItem.setLongitude(marker.getPosition().longitude+"");
 
                 }
                 @Override
@@ -335,8 +336,8 @@ public class LocationInMapActivity extends AppCompatActivity {
         locationItem.setStreet (street);
         locationItem.setLocationDescribe (locationDescribe);
         locationItem.setCoorType (coorType);
-        locationItem.setLongitude (longitude);
-        locationItem.setLatitude (latitude);
+//        locationItem.setLongitude (longitude);
+//        locationItem.setLatitude (latitude);
         Log.d (TAG,"locationItem = " +locationItem.toString ());
         return locationItem;
     }

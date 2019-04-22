@@ -4,12 +4,12 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
+import com.example.xiaojin20135.maplibs.map.util.MapUtil;
 
 import java.util.LinkedList;
 
@@ -65,8 +65,8 @@ public abstract class LocationActivity extends AppCompatActivity {
                         //以下只列举部分获取经纬度相关（常用）的结果信息
                         //更多结果信息获取说明，请参照类参考中BDLocation类中的说明
                         LocationItem locationItem = new LocationItem ();
-                        locationItem.setLatitude (bdLocation.getLatitude ()+"");
-                        locationItem.setLongitude (bdLocation.getLongitude ()+"");
+                        locationItem.setLatitude (bdLocation.getLatitude ());
+                        locationItem.setLongitude (bdLocation.getLongitude ());
                         locationItem.setAddr (bdLocation.getAddrStr ()); //获取详细地址信息
                         locationItem.setCountry (bdLocation.getCountry()); //获取国家
                         locationItem.setProvince (bdLocation.getProvince()); //获取省份

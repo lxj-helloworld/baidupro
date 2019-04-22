@@ -1,4 +1,4 @@
-package com.example.xiaojin20135.maplibs.map;
+package com.example.xiaojin20135.maplibs.map.util;
 
 /**
  * Created by lixiaojin on 2018-08-02 10:37.
@@ -33,4 +33,7 @@ public class MapUtil {
 
     //从地图界面返回上一个界面的resultcode
     public final static int resultCode_Baidu = 100;
+
+    public static final String latitude = "latitude";
+    public static final String longitude = "longitude";
 }

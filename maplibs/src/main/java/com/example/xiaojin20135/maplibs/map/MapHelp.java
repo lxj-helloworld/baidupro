@@ -5,6 +5,7 @@ import android.os.Bundle;
 import com.baidu.location.BDLocation;
 import com.baidu.mapapi.model.LatLng;
 import com.baidu.mapapi.utils.DistanceUtil;
+import com.example.xiaojin20135.maplibs.map.util.MapUtil;
 
 import java.util.LinkedList;
 

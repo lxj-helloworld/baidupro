@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.xiaojin20135.maplibs" >
-
+    package="com.example.xiaojin20135.maplibs">
     //获取设备网络状态，禁用后无法获取网络状态
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     //网络权限，当禁用后，无法进行检索等相关业务
@@ -23,13 +23,16 @@
     <uses-permission android:name="android.permission.CAMERA" />
     //程序在手机屏幕关闭后后台进程仍然运行
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <application>
 
+    <application>
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
             android:process=":remote" />
-        <activity android:name=".map.LocationActivity"></activity>
-        <activity android:name=".map.LocationInMapActivity"></activity>
+
+        <activity android:name=".map.LocationActivity" />
+        <activity android:name=".map.LocationInMapActivity" />
+        <activity android:name=".map.activity.ShowMapActivity" />
     </application>
+
 </manifest>

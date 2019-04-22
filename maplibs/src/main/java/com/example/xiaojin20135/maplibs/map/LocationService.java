@@ -5,6 +5,7 @@ import android.content.Context;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
+import com.example.xiaojin20135.maplibs.map.util.MapUtil;
 
 /**
  * Created by lixiaojin on 2018-08-02 10:37.
